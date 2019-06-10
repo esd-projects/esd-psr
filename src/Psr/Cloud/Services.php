@@ -23,5 +23,5 @@ interface Services
      * @param string $service
      * @return ServiceInfo
      */
-    public function getService(string $service): ServiceInfo;
+    public function getService(string $service): ?ServiceInfo;
 }
