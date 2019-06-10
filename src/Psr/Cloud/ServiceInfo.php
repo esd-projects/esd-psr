@@ -28,6 +28,11 @@ class ServiceInfo
      * @var string
      */
     private $servicePort;
+
+    /**
+     * @var string
+     */
+    private $serviceAgreement;
     /**
      * @var null|string[]
      */
@@ -38,7 +43,7 @@ class ServiceInfo
      */
     private $serviceTags;
 
-    public function __construct($serviceName, $serviceId, $serviceAddress, $servicePort, $serviceMeta, $serviceTags)
+    public function __construct($serviceName, $serviceId, $serviceAddress, $servicePort, $serviceMeta, $serviceTags, $serviceAgreement)
     {
         $this->serviceName = $serviceName;
         $this->serviceId = $serviceId;
@@ -46,6 +51,7 @@ class ServiceInfo
         $this->servicePort = $servicePort;
         $this->serviceMeta = $serviceMeta;
         $this->serviceTags = $serviceTags;
+        $this->serviceAgreement = $serviceAgreement;
     }
 
     /**
@@ -144,5 +150,21 @@ class ServiceInfo
     public function getServiceTags(): ?array
     {
         return $this->serviceTags;
+    }
+
+    /**
+     * @return string
+     */
+    public function getServiceAgreement(): string
+    {
+        return $this->serviceAgreement;
+    }
+
+    /**
+     * @param string $serviceAgreement
+     */
+    public function setServiceAgreement(string $serviceAgreement): void
+    {
+        $this->serviceAgreement = $serviceAgreement;
     }
 }
