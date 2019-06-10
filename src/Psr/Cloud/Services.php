@@ -11,5 +11,9 @@ namespace ESD\Psr\Cloud;
 
 interface Services
 {
-    public function getServices(string $service): ?array;
+    /**
+     * @param string $service
+     * @return ServiceInfoList
+     */
+    public function getServices(string $service): ?ServiceInfoList;
 }
