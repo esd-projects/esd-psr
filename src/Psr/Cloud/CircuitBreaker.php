@@ -15,6 +15,6 @@ interface CircuitBreaker
     public function success($service);
     public function isAvailable($service);
     public function reset();
-    public function disable();
-    public function enable();
+    public function setEnable($enable);
+    public function isEnable();
 }
